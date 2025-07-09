@@ -1374,7 +1374,7 @@
     "opciones": [
       "Un dispositivo de antivirus de red.",
       "Un dispositivo que permite la autenticación en aplicaciones.",
-      "Un dispositivo que permite bloquear o filtrar el acceso entre dos redes — usualmente una privada y otra externa."
+      "Un dispositivo que permite bloquear o filtrar el acceso entre dos redes."
     ],
     "correcta": 2,
     "multiple": "tema23",
