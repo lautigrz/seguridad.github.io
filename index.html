@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link rel="icon" href="https://th.bing.com/th/id/R.4edefcc4a6e32e4d9d6f18bd56ec8b93?rik=IK8niRhQM5FSzw&pid=ImgRaw&r=0" type="image/png" />
+    <title>Practico</title>
+    <style>
+        .correct {
+            color: rgb(75, 250, 75);
+        }
+
+        .incorrect {
+            color: red;
+        }
+
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #01172c;
+        }
+        form,
+        #questions {
+            font-size: 1rem;
+        }
+
+
+        @media (max-width: 768px) {
+
+            body,
+            form,
+            #questions {
+                font-size: 0.9rem;
+            }
+        }
+
+
+        @media (max-width: 480px) {
+
+            body,
+            form,
+            #questions {
+                font-size: 0.8rem;
+            }
+            
+        }
+
+        .fondo{
+            background-color: #00000077;
+            color: white;
+            border: 1px solid #5e5b5b;
+        }
+        
+    
+    </style>
+</head>
+<body>
+    <div class="container my-5">
+    
+        <label for="grupoSelect" class="form-label text-white">Selecciona parcal:</label>
+      <select id="grupoSelect" class="form-select mb-3 w-100">
+        <option value="" disabled selected>-- Elige una opción --</option>
+        
+        <option value="24">Seguridad - Parcial 1</option>
+        <option value="23">Seguridad - Parcial 2</option>
+  
+    </select>
+        <form id="quizForm">
+            <div id="questions"></div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary mt-4">Enviar respuestas</button>
+            </div>
+        </form>
+        <div id="result" class="mt-4"></div>
+    </div>
+
+</body>
+
+
+<script src="js/practicos.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const elemento = document.getElementById('grupoSelect');
+    const choices = new Choices(elemento, {
+      searchEnabled: false,
+      itemSelectText: '',
+      shouldSort: false
+    });
+  });
+</script>
+
+
+</html>
