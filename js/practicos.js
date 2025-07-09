@@ -1,7 +1,7 @@
 let todasLasPreguntas = [];
 const numeroGrupo1 = document.getElementById("grupoSelect");
 
-fetch('../preguntas.json')
+fetch('./preguntas.json')
   .then(response => response.json())
   .then(preguntas => {
     todasLasPreguntas = preguntas; // todasLasPreguntas ahora es un objeto con temas
